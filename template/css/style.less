@@ -1,0 +1,303 @@
+/*
+
+File Name: style.css
+Date: 3/10/18
+Programmer: Tanner Cheek
+
+*/
+
+@import 'palette.less';
+@import 'mixins.less';
+
+/* MOBILE STYLESHEET */
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    background-color: @color3;
+    color: @color2;
+    line-height: 125%;
+    width: 100%;
+    h1 {
+        font-family: 'Black Han Sans', sans-serif;
+        color: @color2;
+    }
+}
+
+header {
+  a {
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+        
+    }
+  }
+}
+
+main {
+    
+}
+
+footer {
+    padding: 25px;
+    margin-top: 15px;
+    background-color: @color2;
+    color: @color3;
+    text-align: center;
+    h1 {
+        color: @color3;
+        padding: 8px;
+    }
+    p {
+        padding: 5px;
+    }
+    li {
+        display: inline-block;
+    }
+    a {
+        color: @color3;
+    }
+    a:hover {
+        color: @color1;
+    }
+}
+
+
+/* Hamburger menu */
+.hamburger {
+    background:none;
+    top:0;
+    right:0;
+    line-height:45px;
+    color: @color1;
+    border:0;
+    font-size:1.4em;
+    font-weight:700;
+    cursor:pointer;
+    outline:none;
+    z-index:10;
+    padding:5px 15px 0;
+}
+
+.cross {
+    background:none;
+    top:0;
+    right:0;
+    color: @color1;
+    border:0;
+    font-size:3em;
+    line-height:65px;
+    font-weight:700;
+    cursor:pointer;
+    outline:none;
+    z-index:10;
+    padding:7px 15px 0;
+}
+
+.menu {
+    z-index:0;
+    font-weight:700;
+    width:100%;
+    background: @lightColor1;
+    right:0;
+    text-align:center;
+    font-size:12px;
+    top:0px;
+}
+
+.menu ul {
+    list-style-type:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;
+}
+
+.menu li {
+    display:block;
+    border-bottom:#ddd 1px solid;
+    padding:15px 0;
+}
+
+.menu li:hover {
+    display:block;
+    background: @color2;
+    border-bottom:#ddd 1px solid;
+    padding:15px 0;
+}
+
+.menu ul li a {
+    text-decoration:none;
+    color: @color3;
+    margin:0;
+}
+
+.menu ul li a:hover {
+    color: @color3;
+    text-decoration:none;
+}
+
+.glyphicon-home {
+    color: @color2;
+    font-size:1.5em;
+    margin:0 auto;
+}
+
+span {
+    padding-left:20px;
+}
+
+a {
+    color:#369;
+}
+
+.menu a,.menu a:hover {
+    text-decoration:none;
+    color: @color2;
+}
+/* End Hamburger menu */
+
+.diy-slideshow{
+     visibility: hidden;
+     display: none;
+    }
+
+
+.header {
+  overflow: hidden;
+  background-color: @color3;
+  padding: 5px;
+  
+}
+
+.racetimes {
+    text-align: center;
+    h2 {
+        font-weight: bold;
+    }
+    h3 {
+        font-weight: bold;
+    }
+}
+
+.card {
+  box-shadow: 0 5px 10px 0 rgb(255, 0, 0);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 15px;
+  max-width: 450px;
+  min-height: 500px;
+  margin: auto;
+    article {
+        padding: 25px;
+    }
+}
+
+.card:hover {
+    box-shadow: 0 10px 15px 0 rgb(177, 0 ,0);
+}
+
+
+
+
+
+
+
+
+/* STYLING FOR TABLET IN PORTRAIT */
+
+@media only screen and (min-width: 481px) {
+
+
+    
+
+
+
+
+
+
+
+
+
+
+}
+/* STYLING FOR DESKTOP */
+
+@media only screen and (min-width: 1024px) {
+
+
+
+/*Slideshow*/
+
+.diy-slideshow{
+visibility: visible;
+position: relative;
+display: block;
+overflow: hidden;
+}
+figure{
+position: absolute;
+opacity: 0;
+transition: 1s opacity;
+}
+figcaption{
+position: absolute;
+font-family: sans-serif;
+font-size: .8em;
+bottom: .75em;
+right: .35em;
+padding: .25em;
+color: #fff;
+background: rgba(0,0,0, .25);
+border-radius: 2px;
+}
+figcaption a{
+color: #fff;
+}
+figure.show{
+opacity: 1;
+position: static;
+transition: 1s opacity;
+}
+.next, .prev{
+color: #fff;
+position: absolute;
+background: rgba(0,0,0, .6);
+top: 50%;
+z-index: 1;
+font-size: 2em;
+margin-top: -.75em;
+opacity: .3;
+user-select: none;
+}
+.next:hover, .prev:hover{
+cursor: pointer;
+opacity: 1;
+}
+.next{
+right: 0;
+padding: 10px 5px 15px 10px;
+border-top-left-radius: 3px;
+border-bottom-left-radius: 3px;
+}
+.prev{
+left: 0;
+padding: 10px 10px 15px 5px;
+border-top-right-radius: 3px;
+border-bottom-right-radius: 3px;
+}
+
+/*Slideshow End*/
+
+
+
+
+
+
+
+
+
+
+}
