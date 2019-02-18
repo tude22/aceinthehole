@@ -7,13 +7,11 @@ Programmer: Tanner Cheek
 */
 
 @import 'palette.less';
-@import 'mixins.less';
 
 /* MOBILE STYLESHEET */
 
 body {
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
     background-color: @color3;
     color: @color2;
     line-height: 125%;
@@ -23,6 +21,8 @@ body {
         color: @color2;
     }
 }
+
+
 
 header {
   a {
@@ -38,12 +38,20 @@ header {
 }
 
 main {
+    h1 {
+        padding-top: 13px;
+        padding-left: 13px;
+        
+    }
+    p {
+        padding: 13px;
+    }
     
 }
 
 footer {
-    padding: 25px;
-    margin-top: 15px;
+    padding: 35px;
+    margin-top: 20px;
     background-color: @color2;
     color: @color3;
     text-align: center;
@@ -65,112 +73,10 @@ footer {
     }
 }
 
-
-/* Hamburger menu */
-.hamburger {
-    background:none;
-    top:0;
-    right:0;
-    line-height:45px;
-    color: @color1;
-    border:0;
-    font-size:1.4em;
-    font-weight:700;
-    cursor:pointer;
-    outline:none;
-    z-index:10;
-    padding:5px 15px 0;
-}
-
-.cross {
-    background:none;
-    top:0;
-    right:0;
-    color: @color1;
-    border:0;
-    font-size:3em;
-    line-height:65px;
-    font-weight:700;
-    cursor:pointer;
-    outline:none;
-    z-index:10;
-    padding:7px 15px 0;
-}
-
-.menu {
-    z-index:0;
-    font-weight:700;
-    width:100%;
-    background: @lightColor1;
-    right:0;
-    text-align:center;
-    font-size:12px;
-    top:0px;
-}
-
-.menu ul {
-    list-style-type:none;
-    list-style-image:none;
-    margin:0;
-    padding:0;
-}
-
-.menu li {
-    display:block;
-    border-bottom:#ddd 1px solid;
-    padding:15px 0;
-}
-
-.menu li:hover {
-    display:block;
-    background: @color2;
-    border-bottom:#ddd 1px solid;
-    padding:15px 0;
-}
-
-.menu ul li a {
-    text-decoration:none;
-    color: @color3;
-    margin:0;
-}
-
-.menu ul li a:hover {
-    color: @color3;
-    text-decoration:none;
-}
-
-.glyphicon-home {
-    color: @color2;
-    font-size:1.5em;
-    margin:0 auto;
-}
-
-span {
-    padding-left:20px;
-}
-
-a {
-    color:#369;
-}
-
-.menu a,.menu a:hover {
-    text-decoration:none;
-    color: @color2;
-}
-/* End Hamburger menu */
-
 .diy-slideshow{
      visibility: hidden;
      display: none;
     }
-
-
-.header {
-  overflow: hidden;
-  background-color: @color3;
-  padding: 5px;
-  
-}
 
 .racetimes {
     text-align: center;
@@ -183,20 +89,19 @@ a {
 }
 
 .card {
-  box-shadow: 0 5px 10px 0 rgb(255, 0, 0);
-  transition: 0.3s;
-  border-radius: 5px;
+  border-right: 5px solid @color1;
+  border-bottom: 5px solid @color1;
+  border-radius: 12px;
+  border-width: 6px;
   padding: 15px;
-  max-width: 450px;
-  min-height: 500px;
-  margin: auto;
+  margin: 25px;
     article {
         padding: 25px;
     }
 }
 
 .card:hover {
-    box-shadow: 0 10px 15px 0 rgb(177, 0 ,0);
+    box-shadow: 0 10px 15px 0 #343434;
 }
 
 
@@ -210,26 +115,25 @@ a {
 
 @media only screen and (min-width: 481px) {
 
-
+    body {
+        font-size: 15px;
+    }
     
+    nav {
+        a {
+            font-size: 30px;
+        }
+    }
+    
+    header {
+        a {
+            img {
+               height: auto; 
+            }
+        }
+    }
 
-
-
-
-
-
-
-
-
-
-}
-/* STYLING FOR DESKTOP */
-
-@media only screen and (min-width: 1024px) {
-
-
-
-/*Slideshow*/
+    /*Slideshow*/
 
 .diy-slideshow{
 visibility: visible;
@@ -290,11 +194,24 @@ border-bottom-right-radius: 3px;
 }
 
 /*Slideshow End*/
+    
+}
 
+/* STYLING FOR DESKTOP */
 
+@media only screen and (min-width: 1024px) {
 
-
-
+   
+    body {
+        font-size: 20px;
+    }
+   
+    nav {
+        a {
+            font-size: 20px;
+        }
+    }
+    
 
 
 

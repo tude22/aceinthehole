@@ -6,12 +6,9 @@ Date: 3/10/18
 Programmer: Tanner Cheek
 
 */
-/* Parametric mixin for headings */
-/* End parametric mixin for headings */
 /* MOBILE STYLESHEET */
 body {
   font-family: 'Lato', sans-serif;
-  font-size: 20px;
   background-color: #ffffff;
   color: #000000;
   line-height: 125%;
@@ -28,9 +25,16 @@ header a img {
   margin-left: auto;
   margin-right: auto;
 }
+main h1 {
+  padding-top: 13px;
+  padding-left: 13px;
+}
+main p {
+  padding: 13px;
+}
 footer {
-  padding: 25px;
-  margin-top: 15px;
+  padding: 35px;
+  margin-top: 20px;
   background-color: #000000;
   color: #ffffff;
   text-align: center;
@@ -51,96 +55,9 @@ footer a {
 footer a:hover {
   color: #ff0000;
 }
-/* Hamburger menu */
-.hamburger {
-  background: none;
-  top: 0;
-  right: 0;
-  line-height: 45px;
-  color: #ff0000;
-  border: 0;
-  font-size: 1.4em;
-  font-weight: 700;
-  cursor: pointer;
-  outline: none;
-  z-index: 10;
-  padding: 5px 15px 0;
-}
-.cross {
-  background: none;
-  top: 0;
-  right: 0;
-  color: #ff0000;
-  border: 0;
-  font-size: 3em;
-  line-height: 65px;
-  font-weight: 700;
-  cursor: pointer;
-  outline: none;
-  z-index: 10;
-  padding: 7px 15px 0;
-}
-.menu {
-  z-index: 0;
-  font-weight: 700;
-  width: 100%;
-  background: #ff6666;
-  right: 0;
-  text-align: center;
-  font-size: 12px;
-  top: 0px;
-}
-.menu ul {
-  list-style-type: none;
-  list-style-image: none;
-  margin: 0;
-  padding: 0;
-}
-.menu li {
-  display: block;
-  border-bottom: #ddd 1px solid;
-  padding: 15px 0;
-}
-.menu li:hover {
-  display: block;
-  background: #000000;
-  border-bottom: #ddd 1px solid;
-  padding: 15px 0;
-}
-.menu ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  margin: 0;
-}
-.menu ul li a:hover {
-  color: #ffffff;
-  text-decoration: none;
-}
-.glyphicon-home {
-  color: #000000;
-  font-size: 1.5em;
-  margin: 0 auto;
-}
-span {
-  padding-left: 20px;
-}
-a {
-  color: #369;
-}
-.menu a,
-.menu a:hover {
-  text-decoration: none;
-  color: #000000;
-}
-/* End Hamburger menu */
 .diy-slideshow {
   visibility: hidden;
   display: none;
-}
-.header {
-  overflow: hidden;
-  background-color: #ffffff;
-  padding: 5px;
 }
 .racetimes {
   text-align: center;
@@ -152,23 +69,30 @@ a {
   font-weight: bold;
 }
 .card {
-  box-shadow: 0 5px 10px 0 #ff0000;
-  transition: 0.3s;
-  border-radius: 5px;
+  border-right: 5px solid #ff0000;
+  border-bottom: 5px solid #ff0000;
+  border-radius: 12px;
+  border-width: 6px;
   padding: 15px;
-  max-width: 450px;
-  min-height: 500px;
-  margin: auto;
+  margin: 25px;
 }
 .card article {
   padding: 25px;
 }
 .card:hover {
-  box-shadow: 0 10px 15px 0 #b10000;
+  box-shadow: 0 10px 15px 0 #343434;
 }
 /* STYLING FOR TABLET IN PORTRAIT */
-/* STYLING FOR DESKTOP */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 481px) {
+  body {
+    font-size: 15px;
+  }
+  nav a {
+    font-size: 30px;
+  }
+  header a img {
+    height: auto;
+  }
   /*Slideshow*/
   .diy-slideshow {
     visibility: visible;
@@ -230,4 +154,13 @@ a {
     border-bottom-right-radius: 3px;
   }
   /*Slideshow End*/
+}
+/* STYLING FOR DESKTOP */
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+  nav a {
+    font-size: 20px;
+  }
 }

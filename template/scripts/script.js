@@ -25,24 +25,14 @@ $(document).ready(function() {
 
 //alert("jQuery is working");
 
-    $(".cross").hide();
 
-    $(".menu").hide();
-
-    $(".hamburger").show();
-    
-    $(".hamburger").on("click", function() {
-        $(".menu").slideToggle("slow");
-        $(".hamburger").hide();
-        $(".cross").show();
+$(function() {
+    $("a[href=#menuExpand]").click(function(e) {
+        $(".menu").toggleClass("menuOpen");
+        e.preventDefault();
     });
+});
     
-    $(".cross").on("click", function() {
-        $(".menu").slideToggle("slow");
-        $(".cross").hide();
-        $(".hamburger").show();
-    });
-
 var counter = 0,
 $items = $('.diy-slideshow figure'),
 numItems = $items.length;
