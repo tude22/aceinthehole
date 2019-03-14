@@ -1,0 +1,110 @@
+/*
+File Name: hamburger.css
+Date: 02/13/19
+Programmer: Tanner Cheek
+*/
+
+.hamburger {
+    background:none;
+    top:0;
+    right:0;
+    color: #FF0000;
+    border:0;
+    font-size: 2.75em;
+    font-weight:700;
+    cursor:pointer;
+    outline:none;
+    z-index:10;
+    padding:8px;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 13px;
+}
+
+.header .menu ul {
+  padding: 0;
+  margin: 0;
+}
+.header .menu ul li {
+  display: inline-block;
+  width: 150px;
+  background: #000;    
+  border-radius: 5px;
+  list-style: none;
+  margin: 1;
+  padding: 5px;
+  background: #000;
+  box-shadow: 0 5px 10px 0 #4d4d4d;
+  transition: 0.3s;
+}
+
+.header .menu ul li:hover {
+    box-shadow: 0 10px 15px 0 #343434;
+}
+
+.header .menu ul li a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+}
+
+.header .menuIcon {
+  display: none;
+  background: #000;
+  width: 100%;
+  text-align: center;
+}
+
+.header .menuIcon a {
+  width: 100%;
+  display: inline-block;
+  color: #fff;
+}
+.header .menuIcon a img {
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 767px) {
+  .header .menu {
+    max-height: 0;
+    overflow: hidden;
+    float: none;
+    text-align: center;
+    width: 100%;
+    -webkit-transition: max-height 0.5s;
+    -moz-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+  }
+  .header .menu.menuOpen {
+    max-height: 1000px;
+    -webkit-transition: max-height 0.5s;
+    -moz-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+  }
+  .header .menu ul li {
+    padding: 5px;
+    display: block;
+    width: 100%;
+    background: #000;
+    border-top: 3px solid #4d4d4d;
+  }
+  .header .menu ul li:hover {
+    background: #999;
+    border-bottom-color: @color1;
+  }
+  .header .menu ul li a {
+    text-decoration: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 5px;
+    width: 100%;
+  }
+  .header .menuIcon {
+    display: inline-block;
+  }
+}

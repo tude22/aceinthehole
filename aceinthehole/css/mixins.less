@@ -1,0 +1,72 @@
+// out: null
+
+/* Parametric mixin for headings */
+
+.headingStyle(@paramColor:#000000; @paramSize:1.4em) {
+    color: @paramColor; 
+    font-size: @paramSize; 
+    font-weight: bold; 
+    line-height: @paramSize;
+    margin-top: @paramSize / 2;
+    margin-bottom: @paramSize / 2;
+    text-transform: uppercase;
+}
+
+.transition(@paramSeconds: 2s) {
+    -webkit-transition: all @paramSeconds ease-in-out;
+    -moz-transition: all @paramSeconds ease-in-out;
+    -o-transition: all @paramSeconds ease-in-out;
+    transition: all @paramSeconds ease-in-out;
+}
+
+/* End parametric mixin for headings */
+
+.roundedCornersAndBgColor(@paramRadius: 2px; @paramColor:#000000) {
+    -moz-border-radius: @paramRadius;
+    -webkit-border-radius: @paramRadius;
+    border-radius: @paramRadius;
+    background-color: @paramColor;
+}
+
+.buttonShadow(@paramX:10px; @paramY:-10px; @paramBlur:5px; @paramColor:#808080) {
+	box-shadow: @paramX @paramY @paramBlur @paramColor;
+	-moz-box-shadow: @paramX @paramY @paramBlur @paramColor;
+	-webkit-box-shadow: @paramX @paramY @paramBlur @paramColor;
+	-o-box-shadow: @paramX @paramY @paramBlur @paramColor;
+}
+
+
+.gradient(@paramDirection: left; @paramColor1: #CCC; @paramColor2: #AAA) {
+  background: linear-gradient(@paramDirection, @paramColor1 , @paramColor2);
+}
+
+.expand() {
+   transform: scale(1.1);
+   display: inline-block;
+}
+.transparent() {
+    opacity: .50;
+}
+
+.underlineitalic() {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.upperbold() {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.flip() {
+    transform: scaleX(-1)
+}
+
+.navhover() {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+.textshadow() {
+    text-shadow: 2px 2px 8px #9AB4CB
+}

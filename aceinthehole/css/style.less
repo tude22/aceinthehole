@@ -1,0 +1,398 @@
+/*
+
+File Name: style.css
+Date: 3/10/18
+Programmer: Tanner Cheek
+
+*/
+
+@import 'palette.less';
+
+/* MOBILE STYLESHEET */
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: @color3;
+    color: @color2;
+    line-height: 125%;
+    width: 100%;
+    h1 {
+        font-family: 'Black Han Sans', sans-serif;
+        color: @color2;
+    }
+}
+
+
+
+header {
+  a {
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+        
+    }
+  }
+}
+
+main {
+    h1 {
+        padding-top: 13px;
+        padding-left: 13px;
+        
+    }
+    p {
+        padding: 5px 8px 5px 13px;
+        
+    }
+    section {
+        text-align: center;
+    }
+    input[type=text], input[type=number], input[type=tel], select {
+      width: 100%;
+      padding: 13px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid @color2;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type=submit] {
+      width: 100%;
+      background-color: @color1;
+      color: @color2;
+      font-size: 1.75em;
+      font-weight: bold;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type=submit]:hover {
+      background-color: @color2;
+      color: @color1;
+    }
+    textarea {
+      width: 100%;
+      padding: 13px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid @color2;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin: auto;
+      padding: 5px;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    ul {
+        list-style-type: circle;
+        li {
+            margin: 3px;
+            padding-left: 15px;
+            padding-right: 15px;
+
+        }
+    }
+}
+
+footer {
+    padding: 35px;
+    margin-top: 20px;
+    background-color: @color2;
+    color: @color3;
+    text-align: center;
+    h1 {
+        color: @color3;
+        padding: 8px;
+    }
+    p {
+        padding: 5px;
+    }
+    li {
+        display: inline-block;
+    }
+    a {
+        color: @color3;
+    }
+    a:hover {
+        color: @color1;
+    }
+}
+
+.diy-slideshow{
+     visibility: hidden;
+     display: none;
+    }
+
+.racetimes {
+    text-align: center;
+    h2 {
+        font-weight: bold;
+    }
+    h3 {
+        font-weight: bold;
+    }
+}
+
+.card {
+  background: @color3;
+  border-right: 5px solid @color1;
+  border-bottom: 5px solid @color1;
+  border-radius: 12px;
+  border-width: 6px;
+  padding: 13px;
+  margin: 25px;
+    article {
+        padding: 25px;
+    }
+}
+
+.black-card {
+  background: @color2;
+  color: @color3;
+  border-right: 5px solid @color1;
+  border-bottom: 5px solid @color1;
+  border-radius: 12px;
+  border-width: 6px;
+  padding: 13px;
+  margin: 25px;
+}
+
+.card:hover {
+    box-shadow: 0 10px 15px 0 #343434;
+}
+
+.form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 8px;
+    display: flex;
+}
+
+.fb-feed {
+   width: 90%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.container {
+    padding: 15px;
+    margin: auto;
+}
+
+.white-text {
+    color: @color3;
+}
+
+#weather {
+    padding: 25px;
+    margin: auto;
+}
+
+#courses {
+    background: @color2;
+    border-radius: 13px;
+}
+
+/* definition list */
+
+dt, dd {
+   margin: 10px;
+}
+
+dt {
+    cursor: pointer;
+    font-size: 1.5em;
+}
+dt:hover {
+    color: @color1;
+}
+
+dd {
+    font-size: 1.2em;
+    font-style: italic;
+    padding-right: 30px;
+}
+
+/* arrow icon left */
+
+dt:before {
+    border: 0.5em solid;
+    border-color: transparent transparent transparent @color1;
+    content: '';
+    display: inline-block;
+    height: 0;
+    margin-right: 0.5em;
+    vertical-align: middle;
+    width: 0;
+}
+
+dt:hover:before {
+    border-left-color: @color2;
+
+}
+
+/* arrow icon down */
+
+dt.open:before {
+    border-color: @color1 transparent transparent transparent;
+    border-bottom-width: 0;
+}
+    
+dt.open:hover:before {
+    border-left-color: transparent;
+    border-top-color: @color1;
+}
+
+
+
+
+/* STYLING FOR TABLET IN PORTRAIT */
+
+@media only screen and (min-width: 481px) {
+
+    body {
+        font-size: 15px;
+    }
+    
+    nav {
+        a {
+            font-size: 30px;
+        }
+    }
+    
+    header {
+        a {
+            img {
+               height: auto; 
+            }
+        }
+    }
+    
+    .form {
+        padding: 25px;
+        margin: 25px;
+    }
+    
+    .fb-feed {
+   width: 90%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    }
+    
+    .container {
+    padding: 50px;
+    }
+    
+    #mobile-hero {
+        visibility: hidden;
+        display: none;
+    }
+
+    /*Slideshow*/
+
+.diy-slideshow{
+visibility: visible;
+position: relative;
+display: block;
+overflow: hidden;
+}
+figure{
+position: absolute;
+opacity: 0;
+transition: 1s opacity;
+}
+figcaption{
+position: absolute;
+font-family: sans-serif;
+font-size: .8em;
+bottom: .75em;
+right: .35em;
+padding: .25em;
+color: #fff;
+background: rgba(0,0,0, .25);
+border-radius: 2px;
+}
+figcaption a{
+color: #fff;
+}
+figure.show{
+opacity: 1;
+position: static;
+transition: 1s opacity;
+}
+.next, .prev{
+color: #fff;
+position: absolute;
+background: rgba(0,0,0, .6);
+top: 50%;
+z-index: 1;
+font-size: 2em;
+margin-top: -.75em;
+opacity: .3;
+user-select: none;
+}
+.next:hover, .prev:hover{
+cursor: pointer;
+opacity: 1;
+}
+.next{
+right: 0;
+padding: 10px 5px 15px 10px;
+border-top-left-radius: 3px;
+border-bottom-left-radius: 3px;
+}
+.prev{
+left: 0;
+padding: 10px 10px 15px 5px;
+border-top-right-radius: 3px;
+border-bottom-right-radius: 3px;
+}
+
+/*Slideshow End*/
+    
+}
+
+/* STYLING FOR DESKTOP */
+
+@media only screen and (min-width: 1024px) {
+
+   
+    body {
+        font-size: 20px;
+    }
+    nav {
+        a {
+            font-size: 20px;
+        }
+    }
+    .form {
+        max-width: 800px;
+        padding: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .container {
+    padding: 100px;
+    }
+
+
+
+
+
+}
